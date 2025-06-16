@@ -15,7 +15,7 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-os.environ["GOOGLE_API_KEY"] = os.getenv("GOOGLE_API_KEY")
+os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
 
 # Inicializa el modelo de lenguaje
 llm = GoogleGenerativeAI(model="gemini-2.0-flash") # la API se configuro en las variables de entorno
